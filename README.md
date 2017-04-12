@@ -55,7 +55,7 @@ Rex fonctionne avec un système de lignes et de colonnes flex.
 * `.c` : colonne (column)
 
 ``` css
-// Pour le nowrap, il y a aussi les classes .r-no et .c-no 
+/* Pour le nowrap, il y a aussi les classes .r-no et .c-no */
 .r{
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +71,7 @@ On utilise dans celles ci, des unités allant de 1 à 24.
 * `.u-[nbr]` : unité (unit)
 
 ``` css
-// Il y a aussi la classe .u qui correspond à flex: 1
+/* Il y a aussi la classe .u qui correspond à flex: 1 */
 .u-24{
     width: 100%;
 }
