@@ -33,7 +33,7 @@ Il a été conçu pour être léger et coder beaucoup plus rapidement.
 Fichiers
 --------
 
-Les fichiers dans le dossier src (source) sont destinés au contributeurs.
+Les fichiers dans le dossier src (source) sont destinés au développement.
 
 * `rex.css`: Le framework tout juste compilé, sans prefixes vendeurs.
 
