@@ -100,7 +100,7 @@ Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour 
 </div>
 ```
 
-Également disponible, un système d'offset également basé sur le système de 24 grids (de base):
+Également disponible, un système d'offset également basé de 1 à 24:
 * `.o-[nbr]` : offset
 
 ``` css
