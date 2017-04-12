@@ -47,6 +47,78 @@ Il y a également quelques ajustement pour optimiser sa taille.
 
 * `rex.min.css`: Le framework, minifié, destiné à la production.
 
+Documentation
+-------------
+
+Rex fonctionne avec un système de lignes et de colonnes flex.
+`.r` : ligne (row)
+`.c` : colonne (column)
+
+``` css
+.r{
+    display: flex;
+}
+.c{
+    display: flex;
+    flex-direction: column;
+}
+```
+
+On utilise dans celles ci, des unités allant de 1 à 24.
+`.u-[nbr]` : unité (unit)
+
+``` css
+.u-24{
+    width: 100%;
+}
+.u-23{
+    width: 95.83333%;     
+}
+.u-22{
+    ...
+}
+```
+
+Pour placer ces unit, on peut utiliser toutes les propriétés d'align-items/content et justify-content:
+`.[x|y]-start` : alignement sur l'axe choisi au début (défaut)
+`.[x|y]-end` : alignement sur l'axe choisi à la fin
+`.[x|y]-center` : alignement sur l'axe choisi au centre
+`.[x|y]-around` : alignement sur l'axe choisi en mode space-around
+`.[x|y]-between` : alignement sur l'axe choisi en mode space-between
+
+Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour ainsi aligner les éléments enfants :
+
+``` html
+<div class="r x-center y-center">
+    <div>
+	<!-- Je vais être centré horizontalement et verticalement par rapport à mon parent -->
+    </div>
+</div>
+```
+
+Également disponible, un système d'offset également basé sur le système de 24 grids (de base):
+`.o-[nbr]` : offset
+
+``` css
+.o-24{
+    margin-left: 100%;
+}
+.o-23{
+    margin-left: 95.83333%;     
+}
+.o-22{
+    ...
+}
+```
+
+A tout ceci, l'on peut ajouter librement des préfixes pour faire du responsive.
+`...` : all
+`.s-...` : >= 568px
+`.m-...` : >= 768px
+`.l-...` : >= 1080px
+`.xl-...` : >= 1280px
+
+
 Compatibilité navigateurs
 -------------------------
 
