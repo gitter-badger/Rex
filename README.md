@@ -51,8 +51,8 @@ Documentation
 -------------
 
 Rex fonctionne avec un système de lignes et de colonnes flex.
-`.r` : ligne (row)
-`.c` : colonne (column)
+* `.r` : ligne (row)
+* `.c` : colonne (column)
 
 ``` css
 .r{
@@ -65,7 +65,7 @@ Rex fonctionne avec un système de lignes et de colonnes flex.
 ```
 
 On utilise dans celles ci, des unités allant de 1 à 24.
-`.u-[nbr]` : unité (unit)
+* `.u-[nbr]` : unité (unit)
 
 ``` css
 .u-24{
@@ -80,11 +80,11 @@ On utilise dans celles ci, des unités allant de 1 à 24.
 ```
 
 Pour placer ces unit, on peut utiliser toutes les propriétés d'align-items/content et justify-content:
-`.[x|y]-start` : alignement sur l'axe choisi au début (défaut)
-`.[x|y]-end` : alignement sur l'axe choisi à la fin
-`.[x|y]-center` : alignement sur l'axe choisi au centre
-`.[x|y]-around` : alignement sur l'axe choisi en mode space-around
-`.[x|y]-between` : alignement sur l'axe choisi en mode space-between
+* `.[x|y]-start` : alignement sur l'axe choisi au début (défaut)
+* `.[x|y]-end` : alignement sur l'axe choisi à la fin
+* `.[x|y]-center` : alignement sur l'axe choisi au centre
+* `.[x|y]-around` : alignement sur l'axe choisi en mode space-around
+* `.[x|y]-between` : alignement sur l'axe choisi en mode space-between
 
 Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour ainsi aligner les éléments enfants :
 
@@ -97,7 +97,7 @@ Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour 
 ```
 
 Également disponible, un système d'offset également basé sur le système de 24 grids (de base):
-`.o-[nbr]` : offset
+* `.o-[nbr]` : offset
 
 ``` css
 .o-24{
@@ -112,11 +112,11 @@ Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour 
 ```
 
 A tout ceci, l'on peut ajouter librement des préfixes pour faire du responsive.
-`...` : all
-`.s-...` : >= 568px
-`.m-...` : >= 768px
-`.l-...` : >= 1080px
-`.xl-...` : >= 1280px
+* `...` : all
+* `.s-...` : >= 568px
+* `.m-...` : >= 768px
+* `.l-...` : >= 1080px
+* `.xl-...` : >= 1280px
 
 
 Compatibilité navigateurs
