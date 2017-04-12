@@ -1,0 +1,103 @@
+$unit: 24
+$mobile-prefix: s-
+$tablet-prefix: m-
+$computer-prefix: l-
+$highresolution-prefix: xl-
+
+=selfAlign($prefix: null)
+  .#{$prefix}start
+    align-self: start
+  .#{$prefix}center
+    align-self: center
+  .#{$prefix}end
+    align-self: flex-end
+
+=axis($axisA, $axisB, $prefix: null)
+  &.#{$prefix}#{$axisA}-center
+    justify-content: center
+  &.#{$prefix}#{$axisA}-start
+    justify-content: flex-start
+  &.#{$prefix}#{$axisA}-end
+    justify-content: flex-end
+  &.#{$prefix}#{$axisA}-between
+    justify-content: space-between
+  &.#{$prefix}#{$axisA}-around
+    justify-content: space-around
+  &.#{$prefix}#{$axisB}-center
+    align-items: center
+    align-content: center
+  &.#{$prefix}#{$axisB}-start
+    align-items: flex-start
+    align-content: flex-start
+  &.#{$prefix}#{$axisB}-end
+    align-items: flex-end
+    align-content: flex-end
+  &.#{$prefix}#{$axisB}-between
+    align-content: space-between
+  &.#{$prefix}#{$axisB}-around
+    align-content: space-around
+
+=grid($prefix: null)
+  .#{$prefix}u
+    flex: 1
+  @for $i from 1 through $unit
+    .#{$prefix}u-#{$i}
+      width: ($i/$unit)*100%
+    .#{$prefix}o-#{$i}
+      margin-left: ($i/$unit)*100%
+
+=flexSpacing($prefix:null)
+  .r, .no-r
+    +axis(x,y,$prefix)
+  .c, .no-c
+    +axis(y,x,$prefix)
+
+.r, .no-r
+  display: flex
+.c, .no-c
+  display: flex
+.r
+  flex-wrap: wrap
+.no-r
+  flex-wrap: nowrap
+.c
+  flex-flow: column wrap
+.no-c
+  flex-flow: column nowrap
+  +flexSpacing()
+
+
++selfAlign()
++grid()
+
+@media screen and (min-width: 568px)
+  +flexSpacing($mobile-prefix)
+  +selfAlign($mobile-prefix)
+  .#{$mobile-prefix}hidden
+    visibility: hidden
+  +grid($mobile-prefix)
+
+
+@media screen and (min-width: 768px)
+  +flexSpacing($tablet-prefix)
+  +selfAlign($tablet-prefix)
+  .#{$tablet-prefix}hidden
+    visibility: hidden
+  +grid($tablet-prefix)
+
+
+
+@media screen and (min-width: 1024px)
+  +flexSpacing($computer-prefix)
+  +selfAlign($computer-prefix)
+  .#{$computer-prefix}hidden
+    visibility: hidden
+  +grid($computer-prefix)
+
+
+@media screen and (min-width: 1280px)
+  +flexSpacing($highresolution-prefix)
+  +selfAlign($highresolution-prefix)
+  .#{$highresolution-prefix}hidden
+    visibility: hidden
+  +grid($highresolution-prefix)
