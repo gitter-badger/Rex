@@ -46,32 +46,30 @@ $highresolution-prefix: xl-
     .#{$prefix}o-#{$i}
       margin-left: ($i/$unit)*100%
 
-=flexSpacing($prefix:null)
-  .r, .no-r
+=flexDisplay($prefix:null)
+  .#{$prefix}r, .#{$prefix}no-r
+    display: flex
     +axis(x,y,$prefix)
-  .c, .no-c
+  .#{$prefix}c, .#{$prefix}no-c
+    display: flex
     +axis(y,x,$prefix)
+  .#{$prefix}r
+    flex-wrap: wrap
+  .#{$prefix}no-r
+    flex-wrap: nowrap
+  .#{$prefix}c
+    flex-flow: column wrap
+  .#{$prefix}no-c
+    flex-flow: column nowrap
 
-.r, .no-r
-  display: flex
-.c, .no-c
-  display: flex
-.r
-  flex-wrap: wrap
-.no-r
-  flex-wrap: nowrap
-.c
-  flex-flow: column wrap
-.no-c
-  flex-flow: column nowrap
-  +flexSpacing()
++flexDisplay()
 
 
 +selfAlign()
 +grid()
 
 @media screen and (min-width: 568px)
-  +flexSpacing($mobile-prefix)
+  +flexDisplay($mobile-prefix)
   +selfAlign($mobile-prefix)
   .#{$mobile-prefix}hidden
     visibility: hidden
@@ -79,7 +77,7 @@ $highresolution-prefix: xl-
 
 
 @media screen and (min-width: 768px)
-  +flexSpacing($tablet-prefix)
+  +flexDisplay($tablet-prefix)
   +selfAlign($tablet-prefix)
   .#{$tablet-prefix}hidden
     visibility: hidden
@@ -88,7 +86,7 @@ $highresolution-prefix: xl-
 
 
 @media screen and (min-width: 1024px)
-  +flexSpacing($computer-prefix)
+  +flexDisplay($computer-prefix)
   +selfAlign($computer-prefix)
   .#{$computer-prefix}hidden
     visibility: hidden
@@ -96,7 +94,7 @@ $highresolution-prefix: xl-
 
 
 @media screen and (min-width: 1280px)
-  +flexSpacing($highresolution-prefix)
+  +flexDisplay($highresolution-prefix)
   +selfAlign($highresolution-prefix)
   .#{$highresolution-prefix}hidden
     visibility: hidden

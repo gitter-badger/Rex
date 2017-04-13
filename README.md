@@ -26,7 +26,7 @@ Il a été conçu pour être léger et coder beaucoup plus rapidement.
 
 * Mobile first
 
-* Un poids léger (18.9ko minifié)
+* Un poids léger (20.8ko minifié)
 
 * Utilisant la technologie moderne qu'est le Flexbox
 
@@ -83,12 +83,15 @@ On utilise dans celles ci, des unités allant de 1 à 24.
 }
 ```
 
-Pour placer ces unit, on peut utiliser toutes les propriétés d'align-items/content et justify-content:
+Pour placer ces unit, on peut utiliser toutes les propriétés d'align-items/content/self et justify-content:
 * `.[x|y]-start` : alignement sur l'axe choisi au début (défaut)
 * `.[x|y]-end` : alignement sur l'axe choisi à la fin
 * `.[x|y]-center` : alignement sur l'axe choisi au centre
 * `.[x|y]-around` : alignement sur l'axe choisi en mode space-around
 * `.[x|y]-between` : alignement sur l'axe choisi en mode space-between
+* `.start` : alignement de l'élément choisi en mode align-self: start
+* `.end` : alignement de l'élément choisi en mode align-self: end
+* `.center` : alignement de l'élément choisi en mode align-self: center
 
 Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour ainsi aligner les éléments enfants :
 
@@ -96,6 +99,9 @@ Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour 
 <div class="r x-center y-center">
     <div>
 	<!-- Je vais être centré horizontalement et verticalement par rapport à mon parent -->
+    </div>
+    <div class="end">
+	<!-- Je vais être centré horizontalement et être verticalement à la fin de mon parent -->
     </div>
 </div>
 ```
@@ -114,6 +120,16 @@ Ces propriétés doivent être appliqué sur une ligne ou une colonne flex pour 
     ...
 }
 ```
+
+Aussi présente la classe hidden.
+* `.hidden` : hidden
+
+``` css
+.hidden{
+    visibility: hidden;
+}
+```
+
 
 A tout ceci, l'on peut ajouter librement des préfixes pour faire du responsive.
 * `...` : all
