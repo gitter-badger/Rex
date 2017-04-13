@@ -143,7 +143,7 @@ Licence
 -------
 
 Rex est sous licence MIT.
-Regarder le [fichier de LICENCE][] pour plus d'informations.
+Regardez le [fichier de LICENCE][] pour plus d'informations.
 
 
 [fichier de LICENCE]: https://github.com/Mimyka/Rex/blob/master/LICENSE
