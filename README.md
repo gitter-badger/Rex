@@ -1,6 +1,8 @@
 Rex
 ===
 
+[![Join the chat at https://gitter.im/RexCSS/Lobby](https://badges.gitter.im/RexCSS/Lobby.svg)](https://gitter.im/RexCSS/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Plus qu'un simple framework, un ami pour la vie.
 
 Installation
